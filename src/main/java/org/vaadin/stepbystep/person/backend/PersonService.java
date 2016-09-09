@@ -23,7 +23,7 @@ public class PersonService {
 	@Inject
 	PersonRepository entryRepo;
 
-	@PersistenceContext(unitName = "contactsdb")
+	@PersistenceContext(unitName = "personsdb")
 	EntityManager em;
 
 	public PersonService() {

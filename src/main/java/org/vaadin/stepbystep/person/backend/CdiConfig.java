@@ -13,7 +13,7 @@ public class CdiConfig {
 	 */
 	@Produces
 	@Dependent
-	@PersistenceContext(unitName = "contactsdb")
+	@PersistenceContext(unitName = "personsdb")
 	public EntityManager entityManager;
 
 }
