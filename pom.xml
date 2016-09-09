@@ -46,10 +46,21 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>javax</groupId> 
+			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
 </project>
