@@ -27,7 +27,7 @@ Example
 
 	@PostConstruct
 	void load() {
-		service.ensureDemoData();
+		service.loadData();
 
 		container.bind(service.getEntries());
 	}
