@@ -10,6 +10,16 @@ file.
 You can modify the provided demo data from `Persons.csv` located under 
 `src/resources`.
 
+Import & Install Using CLI
+==========================
+Platform and IDE independant, you can install this project locally using the following three commands:
+```bash
+	$ git clone git@github.com:amahdy/person-service.git
+	$ cd person-service
+	$ mvn install
+```
+Or alternatively:
+
 Import Into Eclipse
 ===================
 
@@ -59,7 +69,7 @@ This project is easy to import into Eclipse from the [eclipse-project branch](ht
 
 ![You should get a BUILD SUCCESS in the Console, now the project is ready to be used locally](/readme_files/step11.png?raw=true "You should get a BUILD SUCCESS in the Console, now the project is ready to be used locally")
 
-Referencing this project into another Maven project
+Referencing This Project Into Another Maven Project
 ===================================================
 After installing this project locally, you can easily reference it by including it as a dependecy into the front-end project. Most porbably you will need to include JavaEE dependencies as well:
 
