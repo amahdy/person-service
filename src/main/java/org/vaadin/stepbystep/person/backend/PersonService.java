@@ -33,13 +33,13 @@ public class PersonService {
 		return entryRepo.findAll();
 	}
 
-	public void save(Person entity) {
-		entryRepo.save(entity);
+	public Person save(Person entity) {
+		return entryRepo.saveAndFlush(entity);
 	}
 
 	public void delete(Person entity) {
 		// Hibernate cannot remove detached, reattach...
-		entryRepo.remove(entryRepo.findBy(entity.getId()));
+		entryRepo.removeAndFlush(entryRepo.findBy(entity.getId()));
 	}
 
 	public void loadData() {
