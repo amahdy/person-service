@@ -6,7 +6,7 @@
 	<groupId>org.vaadin.stepbystep</groupId>
 	<artifactId>person-service</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0</version>
+	<version>1.1</version>
 	<name>Person Service: Step by step backend demo for a Vaadin app</name>
 
 	<prerequisites>

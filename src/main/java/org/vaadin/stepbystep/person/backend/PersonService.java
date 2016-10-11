@@ -61,11 +61,11 @@ public class PersonService {
 
 				Person entry = new Person();
 				// entry.setId(Long.parseLong(person[0]));
-				entry.setFirstname(person[1]);
-				entry.setLastname(person[2]);
+				entry.setFirstName(person[1]);
+				entry.setLastName(person[2]);
 				entry.setEmail(person[3]);
 				try {
-					entry.setBirthDate(sdf.parse(person[4]));
+					entry.setDateOfBirth(sdf.parse(person[4]));
 				} catch (ParseException e) {
 					e.printStackTrace();
 				}

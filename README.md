@@ -87,7 +87,7 @@ After installing this project locally, you can easily reference it by including 
 		<dependency>
 			<groupId>org.vaadin.stepbystep</groupId>
 			<artifactId>person-service</artifactId>
-			<version>1.0</version>
+			<version>1.1</version>
 		</dependency>
 		
 		...
