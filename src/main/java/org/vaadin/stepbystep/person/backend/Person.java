@@ -18,20 +18,20 @@ import javax.validation.constraints.Size;
 @Entity
 public class Person extends AbstractEntity {
 
-	@NotNull(message = "Firstname is required")
-	@Size(min = 3, max = 40, message = "Firstname must be longer than 3 and less than 40 characters")
-	private String firstname;
+	@NotNull(message = "First Name is required")
+	@Size(min = 3, max = 40, message = "First Name must be longer than 3 and less than 40 characters")
+	private String firstName;
 
-	@NotNull(message = "Lastname is required")
-	@Size(min = 3, max = 40, message = "Lastname must be longer than 3 and less than 40 characters")
-	private String lastname;
+	@NotNull(message = "Last Name is required")
+	@Size(min = 3, max = 40, message = "Last Name must be longer than 3 and less than 40 characters")
+	private String lastName;
 
 	@NotNull(message = "Email is required")
 	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "Must be valid email")
 	private String email;
 
 	@Temporal(javax.persistence.TemporalType.DATE)
-	private Date birthDate;
+	private Date dateOfBirth;
 
 	private boolean remind = false;
 
@@ -44,20 +44,20 @@ public class Person extends AbstractEntity {
 	public Person() {
 	}
 
-	public String getFirstname() {
-		return firstname;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public boolean isRemind() {
@@ -76,12 +76,12 @@ public class Person extends AbstractEntity {
 		this.email = email;
 	}
 
-	public Date getBirthDate() {
-		return birthDate;
+	public Date getDateOfBirth() {
+		return dateOfBirth;
 	}
-
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
+	
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
 	public String getPicture() {
