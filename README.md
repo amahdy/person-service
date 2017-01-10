@@ -14,6 +14,10 @@ You can modify the provided demo data from `Persons.csv` located under
 
 [![Vaadin Demo Coding in a Youtube Video](http://img.youtube.com/vi/k47CkTx9hUw/0.jpg)](http://www.youtube.com/watch?v=k47CkTx9hUw)
 
+Optain Maven dependecy
+======================
+You can optain the maven dependecy from [Vaain Directoy](https://vaadin.com/directory/#!addon/demo-person-service) without any downloads or installs. 
+
 Import & Install Using CLI
 ==========================
 Platform and IDE independant, you can install this project locally using the following three commands:
