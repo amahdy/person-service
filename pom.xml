@@ -7,7 +7,10 @@
 	<artifactId>person-service</artifactId>
 	<packaging>jar</packaging>
 	<version>1.1</version>
-	<name>Person Service: Step by step backend demo for a Vaadin app</name>
+	<name>Demo Person Service</name>
+	<organization>
+		<name>AMahdy</name>
+	</organization>
 
 	<prerequisites>
 		<maven>3</maven>
@@ -18,6 +21,12 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<deltaspike.version>1.4.1</deltaspike.version>
+		<Implementation-Version>${project.version}</Implementation-Version>
+		<!-- Must not change this because of the Directory -->
+		<Implementation-Title>${project.name}</Implementation-Title>
+		<Implementation-Vendor>${project.organization.name}</Implementation-Vendor>
+		<Vaadin-License-Title>Apache License 2.0</Vaadin-License-Title>
+		<Vaadin-Addon>${project.artifactId}-${project.version}.jar</Vaadin-Addon>
 	</properties>
 
 	<dependencies>
@@ -62,5 +71,26 @@
 				</includes>
 			</resource>
 		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<archive>
+						<index>true</index>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+						<manifestEntries>
+							<!-- Package format version - do not change -->
+							<Vaadin-Package-Version>1</Vaadin-Package-Version>
+							<Vaadin-License-Title>${Vaadin-License-Title}</Vaadin-License-Title>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
