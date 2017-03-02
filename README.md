@@ -95,7 +95,7 @@ After installing this project locally, you can easily reference it by including 
 		<dependency>
 			<groupId>org.vaadin.stepbystep</groupId>
 			<artifactId>person-service</artifactId>
-			<version>1.1</version>
+			<version>2.0</version>
 		</dependency>
 		
 		...
@@ -106,9 +106,10 @@ Usage
 =====
 
 - Inject `PersonService`.
-- Call `loadData()` to load the data from the CSV file.
 - Call `getEntries()` to return a list of `Person`.
 - Call `delete()` or `save()` to update a given entity.
+- Call `getFirst()` to retrieve the first entity.
+- Call `getById()` to retrieve an entity by its id.
 
 Example
 =======
@@ -117,10 +118,7 @@ Example
 	@Inject
 	PersonService service;
 
-	@PostConstruct
 	void load() {
-		service.loadData();
-
-		container.bind(service.getEntries());
+		component.bind(service.getEntries());
 	}
 ```
