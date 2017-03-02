@@ -44,6 +44,12 @@ public class PersonService {
 
 	public void loadData() {
 
+		if(entryRepo.count() != 0) {
+			return;
+		}
+
+		// Fill in demo data
+
 		String csvFile = "Persons.csv";
 		BufferedReader br = null;
 		String line = "";

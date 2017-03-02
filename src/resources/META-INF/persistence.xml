@@ -5,9 +5,9 @@
         server will generate a test database automatically for you. 
         For production deployment you'll want to configure data source in your 
         app server and poin it to your database. -->
-        <!--    <jta-data-source>java:/jboss/datasources/contactsdb</jta-data-source>-->
+        <!-- <jta-data-source>java:/jboss/datasources/personsdb</jta-data-source> -->
         <properties>
-            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
         </properties>
     </persistence-unit>
 </persistence>
