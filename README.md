@@ -1,26 +1,67 @@
 Person Service
 ==============
 
-A simple JPA backend service that loads data from a CSV file and make it 
-accessible through `Person` entity.
+A simple JPA backend service that loads data from a CSV file and make it accessible through `Person` entity.
 
-It can be easily upgraded to read/write from a real database instead of the CSV 
-file.
+It can be easily upgraded to read/write from a real database instead of the CSV file.
 
-You can modify the provided demo data from `Persons.csv` located under 
-`src/resources`.
+You can modify the provided demo data from `Persons.csv` located under `src/resources`.
 
 ##Watch step by step on how to use this backend in a Vaadin project
 
 [![Vaadin Demo Coding in a Youtube Video](http://img.youtube.com/vi/k47CkTx9hUw/0.jpg)](http://www.youtube.com/watch?v=k47CkTx9hUw)
 
-Optain Maven dependecy
-======================
-You can optain the maven dependecy from [Vaain Directoy](https://vaadin.com/directory/#!addon/demo-person-service) without any downloads or installs. 
+##Referencing This Project Into Another Maven Project
 
-Import & Install Using CLI
-==========================
-Platform and IDE independant, you can install this project locally using the following three commands:
+After installing this project locally, you can reference it by including it as a dependency into the front-end project. Most probably you will need to include JavaEE dependencies as well:
+
+```xml
+	<dependencies>
+		...
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.vaadin.stepbystep</groupId>
+			<artifactId>person-service</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+		...
+	</dependencies>
+```
+
+##Usage
+
+- Inject `PersonService`.
+- Call `getEntries()` to return a list of `Person`.
+- Call `delete()` or `save()` to update a given entity.
+- Call `getFirst()` to retrieve the first entity.
+- Call `getById()` to retrieve an entity by its id.
+
+##Example
+
+```java
+	@Inject
+	PersonService service;
+
+	void load() {
+		component.bind(service.getEntries());
+	}
+```
+
+##Obtain Maven dependency
+
+You can obtain the maven dependency from [Vaadin Directory](https://vaadin.com/directory/#!addon/demo-person-service) without any downloads or installs.
+
+##Import & Install Using CLI
+
+Platform and IDE independent, you can install this project locally using the following three commands:
 ```bash
 	$ git clone git@github.com:amahdy/person-service.git
 	$ cd person-service
@@ -28,8 +69,7 @@ Platform and IDE independant, you can install this project locally using the fol
 ```
 Or alternatively:
 
-Import Into Eclipse
-===================
+##Import Into Eclipse
 
 This project is easy to import into Eclipse from the [eclipse-project branch](https://github.com/amahdy/person-service/tree/eclipse-project). Here are the direct steps to get started:
 
@@ -76,49 +116,3 @@ This project is easy to import into Eclipse from the [eclipse-project branch](ht
 **Step 11) You should get a BUILD SUCCESS in the Console, now the project is ready to be used locally**
 
 ![You should get a BUILD SUCCESS in the Console, now the project is ready to be used locally](/readme_files/step11.png?raw=true "You should get a BUILD SUCCESS in the Console, now the project is ready to be used locally")
-
-Referencing This Project Into Another Maven Project
-===================================================
-After installing this project locally, you can easily reference it by including it as a dependecy into the front-end project. Most porbably you will need to include JavaEE dependencies as well:
-
-```xml
-	<dependencies>
-		...
-		
-		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>7.0</version>
-			<scope>provided</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.vaadin.stepbystep</groupId>
-			<artifactId>person-service</artifactId>
-			<version>2.0</version>
-		</dependency>
-		
-		...
-	</dependencies>
-```
-
-Usage
-=====
-
-- Inject `PersonService`.
-- Call `getEntries()` to return a list of `Person`.
-- Call `delete()` or `save()` to update a given entity.
-- Call `getFirst()` to retrieve the first entity.
-- Call `getById()` to retrieve an entity by its id.
-
-Example
-=======
-
-```java
-	@Inject
-	PersonService service;
-
-	void load() {
-		component.bind(service.getEntries());
-	}
-```
