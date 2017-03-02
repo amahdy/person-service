@@ -1,5 +1,6 @@
 package org.vaadin.stepbystep.person.backend;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -33,6 +34,14 @@ public class PersonService {
 		return entryRepo.findAll();
 	}
 
+	public Person getFirst() {
+		return entryRepo.findAll(0, 1).get(0);
+	}
+
+	public Person getById(Long id) {
+		return entryRepo.findById(id).getSingleResult();
+	}
+
 	public Person save(Person entity) {
 		return entryRepo.saveAndFlush(entity);
 	}
@@ -42,6 +51,7 @@ public class PersonService {
 		entryRepo.removeAndFlush(entryRepo.findBy(entity.getId()));
 	}
 
+	@PostConstruct
 	public void loadData() {
 
 		if(entryRepo.count() != 0) {
