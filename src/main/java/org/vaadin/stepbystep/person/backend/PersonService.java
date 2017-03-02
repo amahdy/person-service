@@ -1,18 +1,18 @@
 package org.vaadin.stepbystep.person.backend;
 
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
-
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import java.util.Locale;
 
 /**
  * EJB to hide JPA related stuff from the UI layer.
@@ -60,7 +60,8 @@ public class PersonService {
 			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(csvFile);
 			br = new BufferedReader(new InputStreamReader(inputStream));
 
-			SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yy");
+			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("d-MMM-yy")
+					.withLocale(Locale.US);
 
 			while ((line = br.readLine()) != null) {
 				String[] person = line.split(cvsSplitBy);
@@ -70,11 +71,7 @@ public class PersonService {
 				entry.setFirstName(person[1]);
 				entry.setLastName(person[2]);
 				entry.setEmail(person[3]);
-				try {
-					entry.setDateOfBirth(sdf.parse(person[4]));
-				} catch (ParseException e) {
-					e.printStackTrace();
-				}
+				entry.setDateOfBirth(LocalDate.parse(person[4], dtf));
 				entry.setRemind(Math.random() > 0.5);
 				entry.setPicture(person[5]);
 				entry.setNotes(person[6]);

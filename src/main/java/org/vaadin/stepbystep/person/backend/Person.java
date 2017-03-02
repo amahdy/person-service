@@ -1,14 +1,12 @@
 package org.vaadin.stepbystep.person.backend;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
-import javax.persistence.Temporal;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.time.LocalDate;
 
 /**
  * A domain object example. In a real application this would probably be a JPA
@@ -30,8 +28,7 @@ public class Person extends AbstractEntity {
 	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "Must be valid email")
 	private String email;
 
-	@Temporal(javax.persistence.TemporalType.DATE)
-	private Date dateOfBirth;
+	private LocalDate dateOfBirth;
 
 	private boolean remind = false;
 
@@ -76,11 +73,11 @@ public class Person extends AbstractEntity {
 		this.email = email;
 	}
 
-	public Date getDateOfBirth() {
+	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
 	
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
