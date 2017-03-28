@@ -7,11 +7,13 @@ It can be easily upgraded to read/write from a real database instead of the CSV 
 
 You can modify the provided demo data from `Persons.csv` located under `src/resources`.
 
-##Watch step by step on how to use this backend in a Vaadin project
+Watch step by step on how to use this backend in a Vaadin project
+-
 
 [![Vaadin Demo Coding in a Youtube Video](http://img.youtube.com/vi/k47CkTx9hUw/0.jpg)](http://www.youtube.com/watch?v=k47CkTx9hUw)
 
-##Referencing This Project Into Another Maven Project
+Referencing This Project Into Another Maven Project
+-
 
 After installing this project locally, you can reference it by including it as a dependency into the front-end project. Most probably you will need to include JavaEE dependencies as well:
 
@@ -36,7 +38,8 @@ After installing this project locally, you can reference it by including it as a
 	</dependencies>
 ```
 
-##Usage
+Usage
+-
 
 - Inject `PersonService`.
 - Call `getEntries()` to return a list of `Person`.
@@ -44,7 +47,8 @@ After installing this project locally, you can reference it by including it as a
 - Call `getFirst()` to retrieve the first entity.
 - Call `getById()` to retrieve an entity by its id.
 
-##Example
+Example
+-
 
 ```java
 	@Inject
@@ -55,11 +59,13 @@ After installing this project locally, you can reference it by including it as a
 	}
 ```
 
-##Obtain Maven dependency
+Obtain Maven dependency
+-
 
 You can obtain the maven dependency from [Vaadin Directory](https://vaadin.com/directory/#!addon/demo-person-service) without any downloads or installs.
 
-##Import & Install Using CLI
+Import & Install Using CLI
+-
 
 Platform and IDE independent, you can install this project locally using the following three commands:
 ```bash
@@ -69,7 +75,8 @@ Platform and IDE independent, you can install this project locally using the fol
 ```
 Or alternatively:
 
-##Import Into Eclipse
+Import Into Eclipse
+-
 
 This project is easy to import into Eclipse from the [eclipse-project branch](https://github.com/amahdy/person-service/tree/eclipse-project). Here are the direct steps to get started:
 
