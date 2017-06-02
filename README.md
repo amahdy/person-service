@@ -1,6 +1,8 @@
 Person Service
 ==============
 
+**You can clone this project and import it directly into Eclipse**
+
 A simple JPA backend service that loads data from a CSV file and make it accessible through `Person` entity.
 
 It can be easily upgraded to read/write from a real database instead of the CSV file.
@@ -10,7 +12,7 @@ You can modify the provided demo data from `Persons.csv` located under `src/reso
 Watch step by step on how to use this backend in a Vaadin project
 -
 
-[![Vaadin Demo Coding in a Youtube Video](http://img.youtube.com/vi/k47CkTx9hUw/0.jpg)](http://www.youtube.com/watch?v=k47CkTx9hUw)
+[![Vaadin Demo Coding in a Youtube Video](http://img.youtube.com/vi/Lwhg3NrOLVA/0.jpg)](https://www.youtube.com/watch?v=Lwhg3NrOLVA)
 
 Referencing This Project Into Another Maven Project
 -
