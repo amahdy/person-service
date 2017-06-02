@@ -10,7 +10,7 @@ You can modify the provided demo data from `Persons.csv` located under `src/reso
 Watch step by step on how to use this backend in a Vaadin project
 -
 
-[![Vaadin Demo Coding in a Youtube Video](http://img.youtube.com/vi/k47CkTx9hUw/0.jpg)](http://www.youtube.com/watch?v=k47CkTx9hUw)
+[![Vaadin Demo Coding in a Youtube Video](http://img.youtube.com/vi/Lwhg3NrOLVA/0.jpg)](https://www.youtube.com/watch?v=Lwhg3NrOLVA)
 
 Referencing This Project Into Another Maven Project
 -
@@ -73,53 +73,3 @@ Platform and IDE independent, you can install this project locally using the fol
 	$ cd person-service
 	$ mvn install
 ```
-Or alternatively:
-
-Import Into Eclipse
--
-
-This project is easy to import into Eclipse from the [eclipse-project branch](https://github.com/amahdy/person-service/tree/eclipse-project). Here are the direct steps to get started:
-
-**Step 1) From Eclipse, open File, Import**
-
-![From Eclipse, open File, Import](/readme_files/step01.png?raw=true "From Eclipse, open File, Import")
-
-**Step 2) Select under Git, Projects from Git**
-
-![Select under Git, Projects from Git](/readme_files/step02.png?raw=true "Select under Git, Projects from Git")
-
-**Step 3) Select Clone URI**
-
-![Select Clone URI](/readme_files/step03.png?raw=true "Select Clone URI")
-
-**Step 4) Fill the URI with the repository's link**
-
-![Fill the URI with the repository's link](/readme_files/step04.png?raw=true "Fill the URI with the repository's link")
-
-**Step 5) Keep eclipse-project branch selected and unselect all other branches**
-
-![Keep eclipse-project branch selected and unselect all other branches](/readme_files/step05.png?raw=true "Keep eclipse-project branch selected and unselect all other branches")
-
-**Step 6) Specify a directory for the cloned copy of this project**
-
-![Specify a directory for the cloned copy of this project](/readme_files/step06.png?raw=true "Specify a directory for the cloned copy of this project")
-
-**Step 7) Select Import existing Eclipse projects**
-
-![Select Import existing Eclipse projects](/readme_files/step07.png?raw=true "Select Import existing Eclipse projects")
-
-**Step 8) Eclipse project will be detected and ready to be imported**
-
-![Eclipse project will be detected and ready to be imported](/readme_files/step08.png?raw=true "Eclipse project will be detected and ready to be imported")
-
-**Step 9) You will see the project files and Java classes**
-
-![You will see the project files and Java classes](/readme_files/step09.png?raw=true "You will see the project files and Java classes")
-
-**Step 10) Right click on the project, select Run As, Maven install**
-
-![Right click on the project, select Run As, Maven install](/readme_files/step10.png?raw=true "Right click on the project, select Run As, Maven install")
-
-**Step 11) You should get a BUILD SUCCESS in the Console, now the project is ready to be used locally**
-
-![You should get a BUILD SUCCESS in the Console, now the project is ready to be used locally](/readme_files/step11.png?raw=true "You should get a BUILD SUCCESS in the Console, now the project is ready to be used locally")
