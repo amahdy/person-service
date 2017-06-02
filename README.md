@@ -73,3 +73,5 @@ Platform and IDE independent, you can install this project locally using the fol
 	$ cd person-service
 	$ mvn install
 ```
+
+Instructions on how to import using Eclipse are available in the [eclipse branch](https://github.com/amahdy/person-service/tree/eclipse-project).
